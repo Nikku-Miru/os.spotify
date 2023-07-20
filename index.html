@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>Henotu.gihub.io</title>
-</head>
-<body>
-  <h3>This is your OAuthKey:</h3>
-  <p id="key"></p>
-
-  <h4>Copy it and go back to gmod</h4>
-<script>
-  // Thanks to Code Spy from StackOverflow for this bit of code
-  function getParameterByName(name, url) {
-    if (!url) url = window.location.href;
-    name = name.replace(/[\[\]]/g, '\\$&');
-    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, ' '));
-}
-document.getElementById("key").innerHTML = getParameterByName("code")
-</script>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>OS.Spotify</title>
+  </head>
+  <body>
+    <h3>This is your OAuthKey:</h3>
+    <p id="key"></p>
+  
+    <h4>Copy it and go back to gmod</h4>
+    <script>
+      // Thanks to Code Spy from StackOverflow for this bit of code
+      function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, '\\$&');
+        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+      }
+      document.getElementById("key").innerHTML = getParameterByName("code")
+    </script>
+  </body>
 </html>
